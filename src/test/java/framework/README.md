@@ -1,5 +1,5 @@
 #### Tasks
-Tasks performed on the application: https://rect-dux.realworld.io
+Tasks performed on the application: https://react-redux.realworld.io
 
 
 #### Excercise 1
