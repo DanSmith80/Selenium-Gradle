@@ -13,23 +13,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeleniumBasicTest {
     @Test
-    public void openBing(){
+    public void openBing() {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
-        driver.get("https://www.bing.com/");
+        driver.get("https://www.bing.com");
 
-        WebElement inputText = driver.findElement(By.name("q"));
+        WebElement inputText = driver.findElement(By.id("sb_form_q"));
         inputText.click();
         inputText.sendKeys("HL Tech");
         inputText.submit();
+
 
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
 
         driver.close();
     }
