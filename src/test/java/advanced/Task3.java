@@ -23,7 +23,8 @@ public class Task3 {
         action.moveToElement(expandingDiv);
         action.perform();
 
-        var linkToClick = expandingDiv.findElement(By.xpath(".//a"));
+        // TODO add wait
+        var linkToClick = expandingDiv.findElement(By.tagName(".//a"));
         linkToClick.click();
 
         var header = driver.findElement(By.xpath("//h1"));
